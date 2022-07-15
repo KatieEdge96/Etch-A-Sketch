@@ -30,7 +30,7 @@ function updateGrud() {
 function getRandomColor() {
     const randomR = Math.floor(Math.random() * 256) + 1;
     const randomG = Math.floor(Math.random() * 256) + 1;
-    const randomG = Math.floor(Math.random() * 256) + 1;
+    const randomB = Math.floor(Math.random() * 256) + 1;
 
     return 'rgb(${randomR}, ${randomG}, ${randomB})';
 }
