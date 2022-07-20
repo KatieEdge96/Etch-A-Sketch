@@ -84,3 +84,25 @@ range.addEventListener("input", function() {
 
     updateGrid();
 });
+
+//Mouse events//
+//To draw hold/press mouseclick//
+let isDrawing = false;
+const divSquare = document.querySelector("div");
+
+divSquare.addEventListener("mousedown", function (e) {
+    if (isDrawing) {
+        isDrawing = true;
+        e.target.classList.replace("square", "color");
+        colorGrid(e);
+    }
+});
+
+divSquare.addEventListener("mouseup", function (e) {
+    if (isDrawing) {
+        isDrawing = false;
+    }
+});
+
+updateGrid();
+btnColor.classList.add("active");
