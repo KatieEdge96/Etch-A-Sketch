@@ -70,3 +70,95 @@ body {
     width: 10rem;
     height: 10rem;
 }
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 50rem;
+    outline: 0.5rem solid #fff;
+    outline-offset: -0.5rem;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50rem;
+}
+
+.btn {
+    color: inherit;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn,
+.btn--circle {
+    border: none;
+    transition: all 0.2s ease-out;
+    letter-spacing: -0.05rem;
+}
+
+.btn--circle {
+    color: inherit;
+    font-size: 2.5rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover,
+.btn--circle:hover {
+    cursor: pointer;
+    background-color: #C0E0DE;
+    outline: 0.7rem solid #FFFF82;
+    outline-offset: -0.5rem;
+}
+
+.range-div {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1rem;
+    background: #d3d3d3;
+    outline: none;
+    border-radius: 2rem;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    margin: 0.5rem 0;
+}
+
+#range:hover {
+    opacity: 1;
+}
+
+#range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 100px;
+    background: #000;
+    cursor: pointer;
+}
+
+#range::-moz-range-thumb {
+    width:1.7rem;
+    height: 1.7rem;
+    background: #000;
+    cursor: pointer;
+
+}
