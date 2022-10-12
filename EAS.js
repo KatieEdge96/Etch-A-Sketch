@@ -1,33 +1,9 @@
-const container = document.querySelector('.container')
-const btnBlack = document.createElement('button')
-const btnGrey = document.createElement('button')
-const btnRGB = document.createElement('button')
-const btnSize = document.createElement('button')
-const buttonsContainer = document.querySelector('buttons')
+let board = document.querySelector(".board");
+board.style.gridTemplateColumns = "repeat(16 , 1fr)";
+board.style.gridTemplateRows = "repeat(16 , 1fr)";
 
-function createDivs(col, rows) {
-    for(let i = 0 ; i < (col * rows); i++){
-        const div = document.createElement('div')
-        div.style.border = '1px solid red'
-        container.style.gridTemplateColumns = `repeat(${col}, 1fr)`;
-        container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
-        container.appendChild(div).classList.add('box')
-    }
+for(let i = 0; i<256; i++) {
+    let square = document.createElement("div");
+    square.style.backgroundColor = "#a0db8e";
+    board.insertAdjacentElement("beforeend", square);
 }
-
-createDivs(16,16)
-
-function greyColor() {
-    const boxs = container.querySelectorAll('.box')
-    btnGrey.textContent = 'Grey'
-    btnGrey.addEventListener('click' , () =>{
-        boxs.forEach(box => box.addEventListener('mouseover', () => {
-            let Rnum = Math.floor(Math.random() * 255)
-            box.style.background = `rgb(${Rnum},${Rnum},${Rnum})`
-        }))
-
-    })
-
-    buttonsContainer.appendChild(btnGrey).classList.add('btn')
-}
-greyColor()
